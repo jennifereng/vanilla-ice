@@ -1,7 +1,7 @@
-# vanilla-ice
+# vanilla-ice (Vanilla JavaScript)
 
-Vanilla JavaScript
+### Unsplash Photo Credit:
 
-Unsplash Photo Credit:
-01*Vanilla Javascript Drum Kit - Shawn Sim
-03* - Karina Vorozheeva
+01 - Vanilla Javascript Drum Kit - Shawn Sim
+
+03 - Karina Vorozheeva
