@@ -1,3 +1,12 @@
+:root {
+  --lightBlue: #d8f0ea;
+  --blue: #5298c5;
+  --darkBlue: #204276;
+  --lightYellow: #fdf8e4;
+  --yellow: #e3b06d;
+  --brown: #412d2e;
+}
+
 html {
   font-size: 10px;
   background: url("../background.jpg") center center;
@@ -21,6 +30,8 @@ kbd {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
@@ -34,16 +45,18 @@ kbd {
 }
 
 .key {
-  border: 0.4rem solid #014276;
   border-radius: 0.5rem;
+  border: 0.4rem solid var(--lightYellow);
+  -webkit-box-shadow: 1rem 1rem 1rem var(--brown);
+          box-shadow: 1rem 1rem 1rem var(--brown);
   width: 10rem;
   margin: 1rem;
-  padding: 1rem 0.5rem;
+  padding: 3rem 0.5rem;
   font-size: 1.5rem;
   text-align: center;
-  text-shadow: 0 0 0.75rem rgba(0, 0, 0, 0.75);
-  color: #d8f0ea;
-  background: rgba(82, 152, 197, 0.25);
+  text-shadow: 0.25rem 0.25rem 0.5rem var(--brown);
+  color: var(--yellow);
+  background: var(--darkBlue);
   -webkit-transition: all 0.07s ease;
   transition: all 0.07s ease;
 }
@@ -51,15 +64,15 @@ kbd {
 .playing {
   -webkit-transform: scale(1.1);
           transform: scale(1.1);
-  border-color: #ffc600;
-  -webkit-box-shadow: 0 0 1rem #ffc600;
-          box-shadow: 0 0 1rem #ffc600;
+  border-color: var(--yellow);
+  -webkit-box-shadow: 0 0 1rem var(--yellow);
+          box-shadow: 0 0 1rem var(--yellow);
 }
 
 .sound {
   font-size: 1.2rem;
   text-transform: uppercase;
   letter-spacing: 0.1rem;
-  color: #9cc2e0;
+  color: var(--lightBlue);
 }
 /*# sourceMappingURL=styles.css.map */
