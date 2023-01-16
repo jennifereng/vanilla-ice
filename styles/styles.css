@@ -1,33 +1,115 @@
 body {
-  background: white;
+  width: 100vw;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-size: 12px;
+  margin: unset;
+  background: #fff;
+}
+
+h1 {
+  font-size: 3em;
+}
+
+h2 {
+  font-size: 2.5em;
+}
+
+h3 {
+  font-size: 2em;
+}
+
+h4 {
+  font-size: 1.75em;
+}
+
+h5 {
+  font-size: 1.5em;
+}
+
+h6 {
+  font-size: 1.25em;
+}
+
+p {
+  font-size: 1em;
 }
 
 a {
-  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  font-size: 3em;
+  font-size: 2em;
   text-decoration: none;
+  color: #000;
+}
+
+a:visited {
+  color: #aaa;
 }
 
 a:focus, a:hover {
-  text-decoration: underline;
+  text-decoration: none;
 }
 
-.projects {
+ul {
+  list-style: none;
+}
+
+ul li {
+  position: relative;
+}
+
+ul li p {
+  display: block;
+  position: absolute;
+  -webkit-transition: ease-in-out 0.5s;
+  transition: ease-in-out 0.5s;
+  opacity: 0;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  top: 3em;
+}
+
+ul li:hover p {
+  font-size: larger;
+  opacity: 1;
+  -webkit-transition: ease-in-out 0.5s;
+  transition: ease-in-out 0.5s;
+}
+
+header {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 2em 0;
+  background: #edcd65;
+}
+
+main {
+  padding: 2em 0;
+  height: 80vh;
+}
+
+.title {
+  margin: 0 1em;
+}
+
+.nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  height: 100vh;
   width: 100vw;
 }
 
-.projects :nth-child(1n) {
-  margin: 2em;
+.nav :nth-child(1n):not(p) {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 /*# sourceMappingURL=styles.css.map */

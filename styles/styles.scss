@@ -1,27 +1,112 @@
 body {
-  background: hsl(0, 0%, 100%);
+  width: 100vw;
+
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-size: 12px;
+
+  margin: unset;
+
+  background: #fff;
+}
+
+h1 {
+  font-size: 3em;
+}
+
+h2 {
+  font-size: 2.5em;
+}
+
+h3 {
+  font-size: 2em;
+}
+
+h4 {
+  font-size: 1.75em;
+}
+
+h5 {
+  font-size: 1.5em;
+}
+
+h6 {
+  font-size: 1.25em;
+}
+
+p {
+  font-size: 1em;
 }
 
 a {
-  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  font-size: 3em;
+  font-size: 2em;
   text-decoration: none;
+  color: #000;
+
+  &:visited {
+    color: #aaa;
+  }
 
   &:focus,
   &:hover {
-    text-decoration: underline;
+    text-decoration: none;
   }
 }
 
-.projects {
+ul {
+  //   position: relative;
+  list-style: none;
+
+  li {
+    position: relative;
+    p {
+      display: block;
+      position: absolute;
+      transition: ease-in-out 0.5s;
+      opacity: 0;
+
+      width: max-content;
+      top: 3em;
+    }
+
+    &:hover {
+      p {
+        font-size: larger;
+
+        opacity: 1;
+        transition: ease-in-out 0.5s;
+      }
+    }
+  }
+}
+
+header {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
+  padding: 2em 0;
+
+  background: #edcd65;
+}
+
+main {
+  padding: 2em 0;
+  height: 80vh;
+}
+
+footer {
+}
+
+.title {
+  margin: 0 1em;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-around;
   align-items: center;
-  height: 100vh;
+
   width: 100vw;
 
-  :nth-child(1n) {
-    margin: 2em;
+  :nth-child(1n):not(p) {
+    justify-content: space-between;
   }
 }
