@@ -22,7 +22,8 @@ img {
   background: var(--base);
   filter: blur(var(--blur));
   border-radius: 50%;
-  width: 75vw;
+  width: auto;
+  height: 50vh;
 }
 
 label {
