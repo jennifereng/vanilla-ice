@@ -1,27 +1,30 @@
+@keyframes gradient {
+  0% {
+    background-position: top right;
+  }
+  25% {
+    background-position: 66% 33%;
+  }
+  50% {
+    background-position: center;
+  }
+  75% {
+    background-position: 33% 33%;
+  }
+  100% {
+    background-position: top left;
+  }
+}
+
 html {
-  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
-  background-size: 500% 500%;
+  background: radial-gradient(#ee7752, #e73c7e, #23a6d5, #23d5ab);
+  background-size: 450% 900%;
   font-family: 'helvetica neue';
   text-align: center;
   font-size: 10px;
 
-  animation: gradient 7s ease infinite;
+  animation: gradient 60s ease infinite;
   height: 100vh;
-}
-
-@keyframes gradient {
-  0% {
-    background-position: 0% 50%;
-  }
-  25% {
-    background-position: 75% 25%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
 }
 
 body {

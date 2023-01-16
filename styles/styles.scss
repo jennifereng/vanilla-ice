@@ -1,3 +1,11 @@
+* {
+  --cream: #f4f1de;
+  --peach: #e07a5f;
+  --grey: #3d405b;
+  --green: #81b29a;
+  --yellow: #f2cc8f;
+}
+
 body {
   width: 100vw;
 
@@ -6,7 +14,7 @@ body {
 
   margin: unset;
 
-  background: #fff;
+  background: var(--cream);
 }
 
 h1 {
@@ -38,12 +46,12 @@ p {
 }
 
 a {
-  font-size: 2em;
   text-decoration: none;
-  color: #000;
+  color: var(--grey);
 
   &:visited {
-    color: #aaa;
+    font-style: italic;
+    color: var(--grey);
   }
 
   &:focus,
@@ -53,27 +61,85 @@ a {
 }
 
 ul {
-  //   position: relative;
   list-style: none;
+
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+
+  justify-content: center;
+  align-items: center;
+
+  width: 58vw;
+
+  padding: 0;
+  margin: auto;
 
   li {
     position: relative;
-    p {
-      display: block;
-      position: absolute;
-      transition: ease-in-out 0.5s;
-      opacity: 0;
+    display: flex;
+    flex-grow: 1;
 
-      width: max-content;
-      top: 3em;
+    justify-content: space-around;
+    align-items: center;
+
+    height: 20em;
+    width: 20em;
+
+    margin: 2em;
+    border-radius: 0.5em;
+
+    background: var(--green);
+    box-shadow: 15px 20px 20px var(--grey);
+
+    transition: ease-in-out 0.25s;
+
+    overflow: hidden;
+
+    a {
+      position: relative;
+      display: flex;
+      flex-grow: 1;
+      flex-shrink: 0;
+
+      font-size: 2.5em;
+
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+
+      height: 100%;
+      width: 100%;
+
+      transition: ease-in-out 0.25s;
+    }
+
+    p {
+      display: none;
+      position: absolute;
+      z-index: -1;
+
+      transition: ease-in-out 0.25s;
+
+      color: var(--grey);
+      text-align: center;
+      font-size: large;
+
+      width: 80%;
     }
 
     &:hover {
-      p {
-        font-size: larger;
+      transform: translateY(1em);
+      transition: ease-in-out 0.25s;
+      box-shadow: 10px 15px 5px var(--grey);
 
+      a {
+        opacity: 0;
+      }
+
+      p {
+        display: block;
         opacity: 1;
-        transition: ease-in-out 0.5s;
       }
     }
   }
@@ -84,12 +150,15 @@ header {
   justify-content: space-between;
   padding: 2em 0;
 
-  background: #edcd65;
+  background: var(--yellow);
 }
 
 main {
+  margin: 0;
   padding: 2em 0;
+
   height: 80vh;
+  width: 100vw;
 }
 
 footer {
@@ -97,16 +166,6 @@ footer {
 
 .title {
   margin: 0 1em;
-}
 
-.nav {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-
-  width: 100vw;
-
-  :nth-child(1n):not(p) {
-    justify-content: space-between;
-  }
+  color: var(--grey);
 }
