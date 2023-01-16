@@ -3,21 +3,21 @@
   <head>
     <meta charset="UTF-8" />
     <title>JavaScript + CSS Clock</title>
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="styles/styles.css" />
   </head>
   <body>
     <div class="clock">
       <div class="clock-face">
-        <div class="hand hour-hand"></div>
-        <div class="hand min-hand"></div>
-        <div class="hand second-hand"></div>
+        <div class="hand hand-hour"></div>
+        <div class="hand hand-min"></div>
+        <div class="hand hand-second"></div>
       </div>
     </div>
 
     <script>
-      const secondHand = document.querySelector('.second-hand');
-      const minuteHand = document.querySelector('.min-hand');
-      const hourHand = document.querySelector('.hour-hand');
+      const secondHand = document.querySelector('.hand-second');
+      const minuteHand = document.querySelector('.hand-min');
+      const hourHand = document.querySelector('.hand-hour');
 
       function setDate() {
         const now = new Date();

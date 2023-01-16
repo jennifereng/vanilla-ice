@@ -20,7 +20,8 @@ h2 {
 img {
   padding: var(--spacing);
   background: var(--base);
-  filter: blur(var(--blur));
+  -webkit-filter: blur(var(--blur));
+          filter: blur(var(--blur));
   border-radius: 50%;
   width: auto;
   height: 50vh;
@@ -58,7 +59,8 @@ input[type='range']::-webkit-slider-thumb {
   height: 20px;
   cursor: ew-resize;
   background: #fff;
-  box-shadow: -80px 0 0 80px var(--base);
+  -webkit-box-shadow: -80px 0 0 80px var(--base);
+          box-shadow: -80px 0 0 80px var(--base);
 }
 
 input[type='color'] {
@@ -76,18 +78,26 @@ input[type='color']::-webkit-color-swatch {
 }
 
 .controls {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   margin-bottom: 50px;
 }
 
-.controls__spacing,
-.controls__blur,
-.controls__base {
+.controls__spacing, .controls__blur, .controls__base {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   padding: 0 30px;
 }
+/*# sourceMappingURL=styles.css.map */
