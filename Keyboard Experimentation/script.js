@@ -7,6 +7,10 @@ function playSound(e) {
   key.classList.add('playing');
 }
 
+// function determineSide(e) {
+//   if (e.location !== 2) return;
+// }
+
 function removeTransition(e) {
   if (e.propertyName !== 'transform') return;
   this.classList.remove('playing');
@@ -18,5 +22,5 @@ keys.forEach((key) => key.addEventListener('transitionend', removeTransition));
 window.addEventListener('keydown', playSound);
 
 window.addEventListener('keydown', function (e) {
-  console.log('key', e.key, e.keyCode);
+  console.log('key', e, e.key, e.keyCode);
 });
